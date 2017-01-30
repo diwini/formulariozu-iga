@@ -15,6 +15,48 @@ $balance = $_POST['bala'];
 $renta = $_POST['rent'];
 $auditoria = $_POST['audi'];
 
+if ($asesoria == "on"){
+	$asesoria = 1;
+}
+else {
+	$asesoria = 0;
+}
+
+if ($iva == "on"){
+	$iva = 1;
+}
+else {
+	$iva = 0;
+}
+
+if ($remuneracion == "on"){
+	$remuneracion = 1;
+}
+else {
+	$remuneracion = 0;
+}
+
+if ($balance == "on"){
+	$balance = 1;
+}
+else {
+	$balance = 0;
+}
+
+if ($renta == "on"){
+	$renta = 1;
+}
+else {
+	$renta = 0;
+}
+
+if ($auditoria == "on"){
+	$auditoria = 1;
+}
+else {
+	$auditoria = 0;
+}
+
 require_once dirname(__FILE__).'/conexionlocal.php';
 
 
@@ -42,5 +84,9 @@ VALUES (null,
 $result = mysql_query($query);
 if ($result){
 	echo 'Se inserto correctamente';
-}
+	echo "<br>";
+	echo $nombrecontacto;
+}	
+	header('Location: formulario.php');
 
+	
