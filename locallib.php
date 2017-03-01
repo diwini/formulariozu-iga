@@ -1,5 +1,5 @@
 <?php 
-function get_cliente_data(){
+function get_cliente_data($con){
 	
 	$query = "SELECT * FROM ingresodatos";
 		$result = mysql_query($query);

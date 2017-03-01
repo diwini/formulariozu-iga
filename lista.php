@@ -33,7 +33,7 @@
 
         <tbody>
         <!-- Funcion trae data de la tabla -->
-        <?php get_cliente_data(); ?>
+        <?php get_cliente_data($con); ?>
         <!-- Funcion trae data de la tabla -->
         </tbody>
       </table>
