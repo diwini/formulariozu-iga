@@ -16,40 +16,40 @@ function get_cliente_data(){
 				echo "<td>".$row['asignacion']."</td>";
 				echo "<td>".$row['fechacierre']."</td>";
 				if($row['estadotarea'] == 1){
-					echo "<td><i class='large material-icons'>done</i></td>";
+					echo "<td><i class='small material-icons'>done</i></td>";
 				}else{
-					echo "<td><i class='large material-icons'>not_interested</i></td>";
+					echo "<td><i class='small material-icons'>not_interested</i></td>";
 				}
 				echo "<td>".$row['observacion']."</td>";
 				echo "<td>".$row['rut']."</td>";
 				if($row['asesoria'] == 1){
-					echo "<td><i class='large material-icons'>done</i></td>";
+					echo "<td><i class='small material-icons'>done</i></td>";
 				}else{
-					echo "<td><i class='large material-icons'>not_interested</i></td>";
+					echo "<td><i class='small material-icons'>not_interested</i></td>";
 				}
 				if($row['iva'] == 1){
-					echo "<td><i class='large material-icons'>done</i></td>";
+					echo "<td><i class='small material-icons'>done</i></td>";
 				}else{
-					echo "<td><i class='large material-icons'>not_interested</i></td>";
+					echo "<td><i class='small material-icons'>not_interested</i></td>";
 				}
 				if($row['remun'] == 1){
-					echo "<td><i class='large material-icons'>done</i></td>";
+					echo "<td><i class='small material-icons'>done</i></td>";
 				}else{
-					echo "<td><i class='large material-icons'>not_interested</i></td>";
+					echo "<td><i class='small material-icons'>not_interested</i></td>";
 				}
 				if($row['balance'] == 1){
-					echo "<td><i class='large material-icons'>done</i></td>";
+					echo "<td><i class='small material-icons'>done</i></td>";
 				}else{
-					echo "<td><i class='large material-icons'>not_interested</i></td>";
+					echo "<td><i class='small material-icons'>not_interested</i></td>";
 				}if($row['renta'] == 1){
-					echo "<td><i class='large material-icons'>done</i></td>";
+					echo "<td><i class='small material-icons'>done</i></td>";
 				}else{
-					echo "<td><i class='large material-icons'>not_interested</i></td>";
+					echo "<td><i class='small material-icons'>not_interested</i></td>";
 				}
 				if($row['auditoria'] == 1){
-					echo "<td><i class='large material-icons'>done</i></td>";
+					echo "<td><i class='small material-icons'>done</i></td>";
 				}else{
-					echo "<td><i class='large material-icons'>not_interested</i></td>";
+					echo "<td><i class='small material-icons'>not_interested</i></td>";
 				}
 				echo "</tr>";
 			}
