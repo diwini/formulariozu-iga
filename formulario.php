@@ -1,17 +1,28 @@
-<!--Import Google Icon Font-->
-	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Import materialize.css-->
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-	<link type="text/css" rel="stylesheet" href="css/styles.css"  media="screen,projection"/>
-	<!-- Google Maps Api -->
-	<link href="https://developers.google.com/maps/documentation/javascript/examples/default.css" rel="stylesheet">
-	<!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<!--Import jQuery before materialize.js-->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/materialize.min.js"></script>
-	<input type="submit" value="Base de datos" onclick = "location='lista.php'"/>
+<!-- Header -->
+<?php require_once 'header.php';?>
+<!-- Header -->
+<!-- Inicio Formulario -->
+<style>
+ /* label color */
+   .input-field label {
+     color: #000;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #000;
+   }
+</style>
+<h3>Formulario</h3>
  <div class="row">
     <form method="post" action="insertformulario.php" class="col s10">
       <div class="row">
@@ -27,35 +38,35 @@
       </div>
       <div class="row">
         <div class="input-field col s5">
-          <textarea id="requerimiento" class="materialize-textarea" name="requerimiento" required></textarea>
+          <textarea placeholder="Ingrese Requerimiento" id="requerimiento" class="materialize-textarea" name="requerimiento" required></textarea>
           <label for="requerimiento">Requerimiento</label>
         </div>
       </div>
             <div class="row">
         <div class="input-field col s5">
-          <input id="asignacion" type="text" class="validate" name="asignacion" required>
+          <input placeholder="Ingrese Asignacion" id="asignacion" type="text" class="validate" name="asignacion" required>
           <label for="asignacion">Asignacion</label>
         </div>        
       </div>
       <div class="row">
       <div class="input-field col s5">
-          <input type="date" class="datepicker" name="recepcion" required>
+          <input placeholder="Click Aqui" type="date" class="datepicker" name="recepcion" required>
           <label for="asignacion">Fecha recepcion</label>
         </div>     
        <div class="input-field col s5">
-          <input type="date" class="datepicker" name="compromiso" required>
+          <input placeholder="Cick Aqui" type="date" class="datepicker" name="compromiso" required>
           <label for="asignacion">Fecha compromiso</label>
         </div>       
       </div>
       <div class= "row">
        <div class="input-field col s5">
-          <input type="date" class="datepicker" name="cierre" required>
+          <input placeholder="Click Aqui" type="date" class="datepicker" name="cierre" required>
           <label for="asignacion">Fecha cierre</label>
         </div> 
            </div> 
              <div class= "row">
          <div class="input-field col s5">
-          <textarea id="obs" class="materialize-textarea" name="obs" required></textarea>
+          <textarea placeholder="Ingrese Observaciones" id="obs" class="materialize-textarea" name="obs" required></textarea>
           <label for="obs">Observacion</label>
        </div>
          </div>
@@ -126,6 +137,9 @@
     <i class="material-icons right">send</i>
   </button>
 </form>
+<!-- Inicio footer -->
+<?php require_once 'footer.php';?>
+<!-- Final footer -->
   <script>  
 $(document).ready(function() {
     Materialize.updateTextFields();
