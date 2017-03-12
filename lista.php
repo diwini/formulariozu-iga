@@ -9,7 +9,7 @@
 <!-- Conexion BBDD -->
 <!-- Inicio Contenido -->
 <?php 
-	$select = $_POST['select'];
+	$select = isset($_POST['select']) ? $_POST['select'] : null;
 
 	$input = $_POST['input'];
 	if($select == null){
