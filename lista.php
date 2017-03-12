@@ -11,7 +11,7 @@
 <?php 
 	$select = isset($_POST['select']) ? $_POST['select'] : null;
 
-	$input = $_POST['input'];
+	$input = isset($_POST['input']) ? $_POST['input'] : null;
 	if($select == null){
 		$select = -1;
 	}
