@@ -71,11 +71,7 @@
 
         <tbody>
         <!-- Funcion trae data de la tabla -->
-        <?php 
-        if($select == -1){
-        get_cliente_data($con);
-        }
-		?>
+        <?php get_cliente_data($con,$select,$input);?>
         <!-- Funcion trae data de la tabla -->
         </tbody>
       </table>

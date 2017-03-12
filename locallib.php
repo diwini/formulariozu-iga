@@ -1,7 +1,25 @@
 <?php 
-function get_cliente_data($con){
-	
+function get_cliente_data($con, $select = null, $input = null){
+	if($select = 1){
+		$query = "SELECT * FROM ingresodatos WHERE nombrecontacto LIKE '%$input%'";
+	}
+	elseif($select = 2){
+		$query = "SELECT * FROM ingresodatos WHERE nombreempresa LIKE '%$input%'";
+	}
+	elseif($select = 3){
+		$query = "SELECT * FROM ingresodatos WHERE requerimiento LIKE '%$input%'";
+	}
+	elseif($select = 4){
+		$query = "SELECT * FROM ingresodatos WHERE asignacion LIKE '%$input%'";
+	}
+	elseif($select = 8){
+		$query = "SELECT * FROM ingresodatos WHERE observacion LIKE '%$input%'";
+	}
+	elseif($select = 9){
+		$query = "SELECT * FROM ingresodatos WHERE rut LIKE '%$input%'";
+	}else{
 	$query = "SELECT * FROM ingresodatos";
+	}
 		$result = mysql_query($query);
 	
 		while($row = mysql_fetch_array($result, MYSQL_ASSOC))
